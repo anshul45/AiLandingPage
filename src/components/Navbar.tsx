@@ -8,7 +8,7 @@ const Navbar = () => {
   const links = ["API", "Blog", "Solutions", "Feature", "Pricing"]
 
   return (
-    <div className=' w-[75%] text-[#E5E7EB] bg-[#17181B] shadow-md shadow-gray-600 px-6 h-16 mx-auto flex items-center justify-between rounded-md'>
+    <div className=' w-[75%] text-[#E5E7EB] bg-[#17181B] shadow-md shadow-gray-600 px-6 h-14 mx-auto flex items-center justify-between rounded-md'>
       <a href='#'>
         <Image className='inline mr-2' alt='opengig' src="https://d2iyl9s54la9ej.cloudfront.net/opengig.png" width={25} height={25} />
         <span className='text-lg'>OpenGig</span>

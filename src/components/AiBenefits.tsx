@@ -30,13 +30,13 @@ const AiBenefits = () => {
 const Card = ({ image, title, content, isVerticle }: { image: any, title: string, content: string, isVerticle: boolean }) => {
     const [mouseEnter, setMouseEnter] = useState<boolean>(false);
     return (
-        <div className={`px-8 py-2 bg-[#252422]  rounded-2xl text-left  delay-100 duration-500 ${mouseEnter ? "scale-105" : ""} ${isVerticle ? "flex pl-28  pt-9 gap-20" : ""}`}
+        <div className={`px-8 py-2 bg-[#252422]   rounded-2xl text-left  delay-100 duration-500 ${mouseEnter ? "scale-105" : ""} ${isVerticle ? "flex pl-28  py-9 gap-20" : "pb-4 w-[30%]"}`}
             onMouseEnter={() => setMouseEnter(true)}
             onMouseLeave={() => setMouseEnter(false)}
         >
 
             <Image alt='api' className='mx-auto' src={image} width={200} height={200} />
-            <div className={`${isVerticle ? "pt-3 flex flex-col justify-between" : " space-y-5"}`}>
+            <div className={`${isVerticle ? "py-3 flex flex-col justify-between" : " space-y-5"}`}>
                 <div className={`${isVerticle ? "" : "space-y-5"}`}>
                     <h1 className='text-2xl'>{title}</h1>
                     <p className='text-sm'>{content}</p>

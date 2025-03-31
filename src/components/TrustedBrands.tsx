@@ -12,7 +12,6 @@ const brands = [
   { name: "Reddit", logo: "/assets/images/brand-logos/reddit.svg" },
 ];
 
-// Duplicate the brands array to create a seamless loop effect
 const loopBrands = [...brands, ...brands];
 
 const TrustedBrands = () => {

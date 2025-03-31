@@ -50,11 +50,11 @@ const PreBuiltTools = () => {
           <h2 className="text-4xl font-medium font-serif md:text-5xl">
             Pre-built AI Tools
           </h2>
-          {/* <Butto variant="outline" size="lg" asChild className="mt-8">
+          <Button variant="outline" size="lg" asChild className="mt-8">
             <Link href="#">
               Start Chat
             </Link>
-          </Butto> */}
+          </Button>
         </div>
 
         {/* Tools List */}
