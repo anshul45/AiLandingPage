@@ -48,8 +48,8 @@ const AdditionalFeatures = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature) => (
-          <div className="rounded-md text-center px-9 py-6 h-96 bg-[#252422]">
+        {features.map((feature,idx) => (
+          <div className="rounded-md text-center px-9 py-6 h-96 bg-[#252422]" key={idx}>
             <div className="h-[180px]">
             <Image src={feature.image} alt="Image"  className="mx-auto w-full h-full"/>
             </div>
