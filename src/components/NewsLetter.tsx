@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Newsletter = () => {
   return (
-    <section className="container mx-auto py-16 px-4 md:px-6 lg:py-20">
+    <section className="container w-[70%] rounded-md mx-auto py-1 mt-20 px-1 md:px-1 lg:py-1 bg-[#17181B]">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 rounded-lg bg-muted/30 p-6 dark:bg-card md:flex-row md:p-8">
         <div className="text-center md:text-left">
           <h2 className="text-xl font-semibold md:text-2xl">

@@ -18,35 +18,30 @@ const SubscriptionComparison = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:max-w-5xl">
-        <Card className="overflow-hidden border bg-card shadow-xl dark:border-border/50">
-          <CardContent className="p-2">
+      
             <Image
               src="/assets/images/home/multi-sub.png" // Update path
               alt="Multiple Subscriptions Comparison"
               width={650}
               height={400}
-              className="h-auto w-full rounded-md object-cover"
+              className="h-auto w-full rounded-md object-cover border-[1px] border-gray-700 p-2"
             />
-          </CardContent>
-           {/* Optional: Add title/caption if needed */}
-        </Card>
-        <Card className="overflow-hidden border bg-card shadow-xl dark:border-border/50">
-          <CardContent className="p-2">
+       
+     
             <Image
               src="/assets/images/home/single-sub.jpg" 
               alt="Single Pixa Subscription Comparison"
               width={650}
               height={400}
-              className="h-auto w-full rounded-md object-cover"
+              className="h-auto w-full rounded-md object-cover border-[1px] border-gray-700 p-2"
             />
-          </CardContent>
-        </Card>
+   
       </div>
 
-      <Button size="lg" asChild className="group mt-10 shadow-xl md:mt-12">
+      <Button size="lg"  asChild className="group bg-white text-black mt-10 shadow-xl md:mt-12">
         <Link href="#">
           Start Chat
-          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight className=" h-4 w-2 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </Button>
     </section>
