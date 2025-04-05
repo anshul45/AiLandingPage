@@ -6,9 +6,20 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlayCircle } from "lucide-react";
 import { AnimatedDiv } from "./animated-div";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 
 export function HeroSection() {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"], 
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [60, 0]);
+
+  const smoothRotateX = useSpring(rotateX, { damping: 20, stiffness: 100 });
   return (
     <section id="hero-section" className="relative flex min-h-screen w-full max-w-[100vw] flex-col overflow-hidden pt-[60px]">
       <div className="flex h-full min-h-[calc(100vh-60px)] w-full flex-col place-content-center gap-6 p-[5%] xl:items-start items-center lg:p-4">
@@ -38,9 +49,10 @@ export function HeroSection() {
           <motion.div
             id="dashboard-container"
             className="relative max-w-[800px] max-h-[800px] overflow-hidden rounded-xl bg-transparent max-md:max-w-full"
-            initial={{ rotateX: 50, opacity: 0 }}
-            whileInView={{ rotateX: 0, opacity: 1 }}
-            transition={{ duration: 1.8, delay:1.3 }}
+            ref={ref}
+            style={{
+              rotateX: smoothRotateX,
+            }}
           >
             <Image
               src="/assets/images/home/phone.png"

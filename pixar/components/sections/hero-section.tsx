@@ -4,13 +4,24 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlayCircle, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { AnimatedDiv } from "@/components/ui/animated-div";
 import { VideoDialog } from "@/components/ui/video-dialog";
 import { PlaygroundDemo } from "@/components/ui/playground-demo";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"], 
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [60, 0]);
+
+  const smoothRotateX = useSpring(rotateX, { damping: 20, stiffness: 100 });
 
   return (
     <section id="hero-section" className="relative flex min-h-screen w-full flex-col overflow-hidden pt-24 md:pt-32">
@@ -58,9 +69,16 @@ export function HeroSection() {
         </div>
 
         {/* Playground Demo */}
-        <AnimatedDiv yOffset={50} delay={0.4} className="relative mt-8 flex w-full justify-center">
+        <motion.div
+            id="dashboard-container"
+            className="flex justify-center"
+            ref={ref}
+            style={{
+              rotateX: smoothRotateX,
+            }}
+          >
           <PlaygroundDemo />
-        </AnimatedDiv>
+          </motion.div>
       </div>
 
       <VideoDialog
