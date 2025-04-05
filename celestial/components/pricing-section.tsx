@@ -56,10 +56,10 @@ const itemVariants = {
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="w-full max-w-[100vw] py-16 lg:py-24 bg-muted/30 dark:bg-muted/10">
+    <section id="pricing" className="w-full max-w-[100vw] py-5 lg:py-5 bg-muted/30 dark:bg-muted/10">
       <div className="container mx-auto px-4 flex flex-col items-center gap-10 lg:gap-12">
         <motion.h3
-          className="text-3xl md:text-4xl text-primary font-medium text-center"
+          className="text-3xl md:text-4xl text-[#4F55C1] font-semibold text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function PricingSection() {
         </motion.h3>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-8 w-full max-w-6xl"
+          className="flex flex-wrap justify-center gap-8 w-full"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -80,7 +80,7 @@ export default function PricingSection() {
               <Card
                 className={cn(
                   "flex flex-col h-full shadow-xl dark:bg-card",
-                  tier.isFeatured ? "border-2 border-primary" : "bg-background"
+                  tier.isFeatured ? "border-2 border-[#4F55C1]" : "bg-background"
                 )}
               >
                 <CardHeader className="items-center text-center pt-8">
@@ -102,7 +102,7 @@ export default function PricingSection() {
                       </li>
                     ))}
                   </ul>
-                  <Button asChild size="lg" className="mt-auto w-full transition-transform duration-300 hover:scale-[1.02]">
+                  <Button asChild size="lg" className="mt-auto bg-[#4F55C1] rounded-3xl w-full transition-transform duration-300 hover:scale-[1.02]">
                     <Link href="/signup">Get now</Link>
                   </Button>
                 </CardContent>

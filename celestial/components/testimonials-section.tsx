@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
     <section className="w-full max-w-[100vw] py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 flex flex-col items-center gap-10 lg:gap-12">
         <motion.h3
-          className="text-3xl md:text-4xl text-primary font-medium text-center"
+          className="text-2xl md:text-3xl text-[#4F55C1] font-semibold text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

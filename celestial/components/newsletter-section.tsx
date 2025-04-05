@@ -14,16 +14,16 @@ export default function NewsletterSection() {
   return (
     <section className="w-full max-w-[100vw] py-16 lg:py-24 bg-background">
       <motion.div
-        className="container mx-auto px-4 flex flex-col items-center gap-4 lg:gap-6 text-center"
+        className="container mx-auto px-4 flex flex-col items-center gap-2 lg:gap-6 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeIn}
       >
-        <h2 className="text-2xl md:text-3xl text-primary font-medium">
+        <h2 className="text-2xl md:text-3xl text-[#4F55C1] font-medium">
           Special Newsletter Signup
         </h2>
-        <h3 className="text-xl md:text-2xl text-foreground font-semibold">
+        <h3 className="text-xl md:text-2xl text-foreground">
           Keep yourself updated
         </h3>
 
@@ -34,11 +34,11 @@ export default function NewsletterSection() {
           <Input
             type="email"
             placeholder="Enter your email address"
-            className="flex-grow h-12 text-base"
+            className="w-60 border-2 rounded-3xl h-12 text-base"
             aria-label="Email for newsletter"
             required
           />
-          <Button type="submit" size="lg" className="h-12">
+          <Button type="submit" size="lg" className="h-12 bg-[#4F55C1] px-5 rounded-3xl">
             Signup
           </Button>
         </form>

@@ -50,7 +50,7 @@ const itemVariants = {
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="w-full max-w-[100vw] py-16 lg:py-24 bg-muted/30 dark:bg-muted/10">
+    <section id="features" className="w-full max-w-[100vw] py-4 lg:py-4 bg-muted/30 dark:bg-muted/10">
       <div className="container mx-auto px-4 flex flex-col items-center gap-10 lg:gap-16">
         <motion.div
           className="text-center flex flex-col gap-3"
@@ -59,12 +59,12 @@ export default function FeaturesSection() {
           viewport={{ once: true, amount: 0.5 }}
           variants={itemVariants}
         >
-          <h3 className="text-xl text-primary font-medium">Features loved by our clients</h3>
+          <h3 className="text-xl text-[#4F55C1] font-medium">Features loved by our clients</h3>
           <h2 className="text-3xl lg:text-4xl font-semibold text-foreground">Core features</h2>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl w-full"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-28 lg:gap-8 max-w-6xl w-full"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -74,10 +74,10 @@ export default function FeaturesSection() {
             const Icon = feature.icon;
             return (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="h-full text-center bg-background dark:bg-card shadow-sm hover:shadow-md transition-shadow duration-300">
+                <Card className="h-full text-center bg-background shadow-sm hover:shadow-md transition-shadow duration-300">
                   <CardHeader className="items-center">
                     <div className="p-3 rounded-full bg-primary/10 mb-3">
-                       <Icon className="w-8 h-8 text-primary" aria-hidden="true" />
+                       <Icon className="w-8 h-8 text-[#4F55C1]" aria-hidden="true" />
                     </div>
                     <CardTitle className="text-2xl">{feature.title}</CardTitle>
                   </CardHeader>

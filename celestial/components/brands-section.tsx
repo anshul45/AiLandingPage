@@ -17,7 +17,7 @@ const fadeIn = {
 
 export default function BrandsSection() {
   return (
-    <section className="w-full max-w-[100vw] py-12 lg:py-16 bg-muted/30 dark:bg-muted/10">
+    <section className="w-full max-w-[100vw] py-6 lg:py-6 bg-muted/30 dark:bg-muted/10">
       <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-wrap justify-center items-center gap-10 lg:gap-16"

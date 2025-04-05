@@ -19,9 +19,9 @@ export default function IntroSection() {
         variants={fadeIn}
       >
         <h2 className="text-3xl lg:text-4xl font-semibold text-foreground">
-          Simple. <span className="text-primary">Fast.</span> Loved
+          Simple. <span className="text-[#4F55C1]">Fast.</span> Loved
         </h2>
-        <p className="text-muted-foreground lg:text-lg">
+        <p className=" lg:text-base">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus consequatur odit exercitationem repellendus, recusandae ratione at tenetur, omnis dicta tempore dolor saepe quos doloremque tempora quibusdam. Aspernatur deserunt voluptatem aliquid.
         </p>
       </motion.div>

@@ -19,12 +19,12 @@ const scaleUp = {
 export default function HeroSection() {
   return (
     <section
-      className="w-full min-h-screen max-w-[100vw] pt-[110px] pb-16 lg:pt-[150px] lg:pb-24 flex flex-col overflow-hidden relative bg-background"
+      className="w-full min-h-screen max-w-[100vw] pt-[10px] pb-16 lg:pt-[70px] lg:pb-24 flex flex-col overflow-hidden relative bg-background"
       aria-labelledby="hero-heading"
     >
       <div className="container mx-auto px-4 flex flex-col items-center justify-center flex-grow gap-10 lg:gap-16">
         <motion.div
-          className="flex flex-col items-center text-center"
+          className="flex flex-col items-center text-center "
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
@@ -36,7 +36,7 @@ export default function HeroSection() {
           >
             Re-imagining the Future
             <br />
-            <span className="text-primary">of Software</span>
+            <span className="text-[#4F55C1]">of Software</span>
           </motion.h1>
           <motion.p
             className="mt-6 lg:mt-10 max-w-[450px] text-muted-foreground lg:text-lg"
@@ -48,10 +48,10 @@ export default function HeroSection() {
             className="mt-6 lg:mt-8 flex flex-col sm:flex-row gap-4"
             variants={fadeIn}
           >
-            <Button asChild size="lg" className="transition-transform duration-300 hover:scale-[1.03]">
+            <Button asChild size="lg" className="bg-[#4F55C1] rounded-3xl transition-transform duration-300 hover:scale-[1.03]">
               <Link href="/signup">Get started</Link>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="transition-transform duration-300 hover:scale-[1.03] bg-primary/10 hover:bg-primary/20 text-primary">
+            <Button asChild variant="secondary" size="lg" className="transition-transform duration-300 hover:scale-[1.03] bg-primary/10 hover:bg-primary/20 text-[#4F55C1] rounded-3xl">
               <Link href="#features">Learn more</Link>
             </Button>
           </motion.div>

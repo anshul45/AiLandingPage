@@ -34,7 +34,7 @@ export default function Footer() {
       viewport={{ once: true, amount: 0.1 }}
       transition={{ staggerChildren: 0.1 }}
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+      <div className="flex justify-evenly items-center">
         {/* Column 1: Logo and Info */}
         <motion.div
           className="flex flex-col items-center md:items-start text-center md:text-left gap-4"
@@ -94,19 +94,7 @@ export default function Footer() {
             ))}
           </nav>
         </motion.div>
-
-        {/* Column 3: Placeholder/Empty or additional content */}
-        <motion.div variants={fadeIn}>
-          {/* You can add more content here if needed, like another set of links or a small form */}
-        </motion.div>
       </div>
-
-      <motion.div
-        className="text-center mt-12 pt-8 border-t border-border text-sm text-muted-foreground"
-        variants={fadeIn}
-      >
-        © {new Date().getFullYear()} Celestial SaaS. All rights reserved.
-      </motion.div>
     </motion.footer>
   );
 }

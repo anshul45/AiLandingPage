@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu, X, ArrowRight } from 'lucide-react';
@@ -34,7 +33,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex h-[60px] items-center justify-between px-4 md:px-[5%] transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex h-[60px] items-center justify-between px-4 md:px-[5%] transition-all duration-300 ",
         isScrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
       )}
     >
@@ -45,7 +44,7 @@ export default function Header() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-6 text-base">
+      <nav className="hidden md:flex items-center gap-10 text-base">
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -59,7 +58,7 @@ export default function Header() {
 
       {/* Desktop Action Button */}
       <div className="hidden md:flex items-center gap-4">
-         <Button asChild className="rounded-full group">
+         <Button asChild className="rounded-full group bg-[#4F55C1]">
           <Link href="/signup" aria-label="Get started">
             Get started
             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
