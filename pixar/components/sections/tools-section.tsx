@@ -59,14 +59,14 @@ export function ToolsSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col gap-16 lg:flex-row lg:gap-8">
           {/* Sticky Title Section (Left) */}
-          <div className="w-full text-center lg:sticky lg:top-24 lg:h-fit lg:w-1/3 lg:text-left">
+          <div className="w-full text-center lg:sticky lg:top-24 lg:h-fit lg:w-1/2 lg:text-left">
             <AnimatedDiv yOffset={30} delay={0.1}>
-              <h2 className="font-serif text-4xl font-medium md:text-5xl">
+              <h2 className="font-serif text-3xl font-medium md:text-5xl">
                 Pre-built AI Tools
               </h2>
             </AnimatedDiv>
-            <AnimatedDiv yOffset={30} delay={0.2} className="mt-6 lg:mt-8">
-              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <AnimatedDiv yOffset={30} delay={0.2} className="mt-6 lg:mt-8 flex justify-center">
+              <Button asChild variant="outline" size="lg" className="border-primary  text-primary hover:bg-primary hover:text-primary-foreground">
                 <Link href="#">
                   Start Chat
                 </Link>

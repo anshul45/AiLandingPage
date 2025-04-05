@@ -35,10 +35,10 @@ export function AnimatedDiv({
   className,
   variants = defaultVariants,
   once = true,
-  amount = 0.3, // Trigger when 30% of the element is in view
+  amount = 0.3, 
   delay = 0,
-  duration = 0.5,
-  yOffset = 20,
+  duration = 0.7,
+  yOffset = 10,
   tag = 'div',
 }: AnimatedDivProps) {
   const ref = useRef(null);

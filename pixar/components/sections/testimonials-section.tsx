@@ -45,7 +45,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full">
       <div className="container mx-auto flex flex-col items-center px-4 md:px-6">
         <AnimatedDiv yOffset={30} delay={0.1} className="text-center">
           <h2 className="text-3xl font-medium md:text-4xl">

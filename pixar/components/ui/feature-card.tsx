@@ -50,7 +50,7 @@ export function FeatureCard({
             <CardTitle className="text-2xl font-medium md:text-3xl">{title}</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-grow flex-col p-6 pt-4 md:p-8 md:pt-4">
-            <CardDescription className="flex-grow text-base leading-relaxed text-muted-foreground">
+            <CardDescription className="flex-grow text-sm h-[180px]  leading-relaxed text-muted-foreground">
               {description}
             </CardDescription>
             <div className="mt-auto flex items-center gap-2 pt-4 text-sm font-medium text-primary">

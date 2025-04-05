@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AnimatedDiv } from "@/components/ui/animated-div";
 
 const features = [
@@ -54,7 +53,7 @@ export function AdditionalFeaturesSection() {
           </h2>
         </AnimatedDiv>
 
-        <div className="mt-12 grid w-full max-w-6xl grid-cols-1 gap-8 md:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid w-full max-w-6xl grid-cols-1 gap-2 md:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <AnimatedDiv
               key={feature.title}
@@ -62,7 +61,7 @@ export function AdditionalFeaturesSection() {
               yOffset={50}
               className="w-full max-w-[350px] mx-auto"
             >
-             <div className="rounded-md text-center px-9 py-6 h-96 bg-[#252422]" key={index}>
+             <div className="rounded-md text-center px-9 py-6 h-96 dark:bg-[#252422]" key={index}>
             <div className="h-[180px]">
             <Image src={feature.imageUrl} width={200} height={200} alt="Image"  className="mx-auto w-full h-full"/>
             </div>

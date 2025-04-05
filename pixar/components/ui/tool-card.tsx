@@ -31,7 +31,7 @@ export function ToolCard({
       yOffset={50}
     >
       <Link href={linkUrl} className="group/card block h-full w-full">
-        <Card className="flex h-[240px] transform gap-6 rounded-xl p-6 transition-all duration-300 hover:shadow-lg dark:bg-muted/20 md:p-8">
+        <Card  className="flex border-none h-[240px] transform gap-6 rounded-xl p-6 transition-all duration-300 hover:shadow-lg dark:shadow-gray-600  md:p-8">
           <div className="text-3xl text-primary md:text-4xl">
             <Icon />
           </div>

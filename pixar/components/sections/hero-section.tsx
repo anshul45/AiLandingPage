@@ -24,10 +24,10 @@ export function HeroSection() {
             <h1 className="text-4xl font-semibold uppercase leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
               All your AI models
               <br />
-              <span className="font-serif font-thin lowercase">in one place</span>
+              <span className="font-serif font-thin">IN ONE PLACE</span>
             </h1>
           </AnimatedDiv>
-          <AnimatedDiv yOffset={30} delay={0.2} className="mt-6 max-w-md text-base text-muted-foreground md:mt-8 md:max-w-lg md:text-lg">
+          <AnimatedDiv yOffset={30} delay={0.2} className="mt-6 max-w-sm text-small text-muted-foreground md:mt-8 md:max-w-sm md:text-small">
             Your all-in-one AI companion. Generate Images, videos, codes, docs, debug your web apps all with Pixa's interface.
           </AnimatedDiv>
 
@@ -35,7 +35,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="group w-[170px] gap-2 rounded-xl border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="group w-[170px] h-14 gap-2 rounded-xl border-primary text-primary"
               onClick={() => setIsVideoOpen(true)}
             >
               <div className="relative flex h-6 w-6 items-center justify-center">
@@ -47,7 +47,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="group w-[170px] gap-2 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]"
+              className="group w-[170px] h-14 gap-2 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]"
             >
               <Link href="#">
                 <span>Get started</span>

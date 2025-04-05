@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -83,7 +82,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-4 left-1/2 z-50 flex h-[60px] w-[95%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-md border bg-background/80 px-4 shadow-sm backdrop-blur-lg transition-all duration-300 md:w-[90%] lg:px-6",
+        "fixed top-4 left-1/2 z-50 flex h-[60px] w-[75%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-md border bg-background/80 px-4 shadow-md backdrop-blur-lg transition-all duration-300 md:w-[75%] lg:px-6 dark:shadow-gray-600",
         isScrolled ? "bg-background/95 shadow-md" : ""
       )}
     >
