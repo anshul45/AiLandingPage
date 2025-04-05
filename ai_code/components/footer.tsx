@@ -22,8 +22,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-muted/40 text-muted-foreground">
-      <div className="container mx-auto flex flex-col gap-8 px-6 py-12 md:flex-row md:justify-between md:gap-12 lg:px-8">
+    <footer className=" text-muted-foreground">
+      <div className="container mx-auto flex flex-col gap-8 px-6 py-12 md:flex-row md:justify-evenly md:gap-12 lg:px-8">
         {/* Logo and Address */}
         <div className="flex flex-col items-center gap-4 md:items-start md:w-1/3 lg:w-1/4">
           <Link href="/" className="mb-2">
@@ -32,7 +32,6 @@ export function Footer() {
               alt="SaaS AI Logo"
               width={100} // Adjusted size
               height={100}
-              className="dark:brightness-0 dark:invert-[1]"
             />
           </Link>
           <address className="text-center not-italic md:text-left text-sm">
@@ -40,26 +39,6 @@ export function Footer() {
             D02 P634,<br />
             United States
           </address>
-        </div>
-
-        {/* Resources Links */}
-        <div className="flex flex-col items-center gap-4 md:items-start md:w-1/3 lg:w-1/4">
-          <h2 className="text-lg font-semibold text-foreground">Resources</h2>
-          <nav className="flex flex-col gap-2 text-center md:text-left">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm hover:text-primary hover:underline transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex flex-col items-center gap-4 md:items-start md:w-1/3 lg:w-1/4">
           <h2 className="text-lg font-semibold text-foreground">Follow us</h2>
           <div className="flex gap-4">
             {socialLinks.map((social) => (
@@ -76,10 +55,22 @@ export function Footer() {
             ))}
           </div>
         </div>
-      </div>
-      <Separator />
-      <div className="container mx-auto px-6 py-4 text-center text-xs lg:px-8">
-        © {new Date().getFullYear()} SaaS AI. All rights reserved.
+
+        {/* Resources Links */}
+        <div className="flex flex-col items-center gap-4 md:items-start md:w-1/3 lg:w-1/4">
+          <h2 className="text-4xl font-semibold text-foreground">Resources</h2>
+          <nav className="flex flex-col gap-2 text-center md:text-left">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-lg text-white hover:text-[#4F55C1]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );

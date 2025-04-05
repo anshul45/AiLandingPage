@@ -46,14 +46,14 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8 bg-muted/40">
+    <section className="flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8">
       <AnimatedWrapper className="text-center mb-10">
-        <h3 className="text-2xl font-medium text-primary md:text-3xl">
+        <h3 className="text-2xl font-medium text-[#C490FF]  md:text-3xl">
           Loved by our clients
         </h3>
       </AnimatedWrapper>
 
-      <div className="container mx-auto columns-1 gap-8 space-y-8 md:columns-2 lg:columns-3">
+      <div className="container mx-auto columns-1 gap-8 space-y-8 md:columns-2 lg:columns-3 px-20">
         {testimonials.map((testimonial, index) => (
           <AnimatedWrapper key={index} className="break-inside-avoid" delay={index * 0.1}>
             <Card className="h-fit w-full bg-card">

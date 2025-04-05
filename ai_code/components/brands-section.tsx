@@ -15,26 +15,41 @@ const brands = [
 
 export function BrandsSection() {
   return (
-    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden py-16 px-4 md:px-8">
-      <AnimatedWrapper className="text-center">
+    <section className="relative flex w-[55%] mx-auto flex-col items-center justify-center overflow-hidden py-10 px-4 md:px-8"> 
         <h2 className="text-xl font-medium text-muted-foreground md:text-2xl">
           Trusted by brands you know
         </h2>
-      </AnimatedWrapper>
 
-      <AnimatedWrapper className="mt-8 w-full max-w-4xl" delay={0.2}>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          {brands.map((brand) => (
-            <div key={brand.alt} className="h-[30px] w-[120px] md:w-[150px]">
-              <Image
-                src={brand.src}
-                alt={brand.alt}
-                width={150}
-                height={30}
-                className="h-full w-full object-contain grayscale transition-all hover:grayscale-0 dark:invert dark:hover:invert-0"
-              />
-            </div>
-          ))}
+      <AnimatedWrapper className="mt-8 overflow-hidden" delay={0.2}>
+        <div className="relative w-full">
+          {/* Inline <style> for keyframes */}
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0%);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+          `}</style>
+
+          <div className="flex mx-auto whitespace-nowrap [animation:scroll_20s_linear_infinite]">
+            {[...brands, ...brands].map((brand, index) => (
+              <div
+                key={`${brand.alt}-${index}`}
+                className="mx-6 h-[30px] w-[120px] md:w-[150px]"
+              >
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={150}
+                  height={30}
+                  className="h-full w-full object-contain grayscale transition-all hover:grayscale-0 dark:invert dark:hover:invert-0"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </AnimatedWrapper>
     </section>

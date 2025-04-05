@@ -48,7 +48,7 @@ export function PricingSection() {
   return (
     <section id="pricing" className="flex w-full flex-col items-center py-16 md:py-24 px-4 md:px-8">
       <AnimatedWrapper className="text-center mb-10">
-        <h3 className="text-2xl font-medium text-primary md:text-3xl">
+        <h3 className="text-2xl font-medium text-[#C490FF] md:text-3xl">
           Simple pricing
         </h3>
       </AnimatedWrapper>
@@ -62,8 +62,8 @@ export function PricingSection() {
           >
             <Card
               className={cn(
-                "flex h-full flex-col bg-card shadow-xl",
-                tier.isFeatured && "border-2 border-primary"
+                "flex h-full flex-col bg-card  shadow-xl",
+                tier.isFeatured && "border-2 border-[#C490FF]"
               )}
             >
               <CardHeader className="items-center pb-4">
@@ -71,13 +71,12 @@ export function PricingSection() {
                   <span className="text-5xl font-semibold">${tier.price}</span>
                   <span className="text-2xl text-muted-foreground">/mo</span>
                 </CardTitle>
-                <CardDescription className="mt-3 text-center">
+                <CardDescription className="mt-3 text-xl text-center">
                   {tier.description}
                 </CardDescription>
               </CardHeader>
-              <Separator className="my-4" />
               <CardContent className="flex-grow">
-                <ul className="flex flex-col gap-3 text-center text-base text-muted-foreground">
+                <ul className="flex flex-col gap-3 text-center text-xl text-muted-foreground">
                   {tier.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
@@ -86,7 +85,7 @@ export function PricingSection() {
               <CardFooter>
                 <Button
                   asChild
-                  className="mt-4 w-full transition-transform duration-300 hover:scale-[1.02]"
+                  className="mt-4 w-full rounded-3xl mx-5 h-11 bg-[#4F55C1] text-white"
                   variant={tier.isFeatured ? "default" : "outline"}
                 >
                   <Link href="/signup">Get now</Link>

@@ -19,13 +19,13 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 flex h-[60px] w-full items-center justify-between bg-background/80 px-[5%] backdrop-blur-sm lg:justify-around">
+    <header className="fixed top-0 z-50 flex h-[60px] w-full items-center justify-between bg-background/80  backdrop-blur-sm px-16">
       <Link href="/" className="flex-shrink-0">
         <Image src="/assets/logo/logo.png" alt="SaaS AI Logo" width={42} height={42} />
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex items-center gap-5 text-base">
+      <nav className="hidden lg:flex items-center gap-12 text-base">
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -39,7 +39,7 @@ export function Header() {
 
       <div className="hidden lg:flex items-center gap-4">
         <ThemeToggle />
-        <Button asChild className="rounded-full transition-transform duration-300 hover:scale-105">
+        <Button asChild className="bg-[#6C72E8] text-white rounded-full transition-transform duration-300 hover:scale-105">
           <Link href="/signup" aria-label="Get started">
             Get started
             <ArrowRight className="ml-2 h-4 w-4" />

@@ -16,7 +16,7 @@ export function NewsletterSection() {
     <section className="flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8">
       <AnimatedWrapper className="container mx-auto max-w-xl">
         <div className="flex w-full flex-col items-center gap-3 text-center">
-          <h2 className="text-xl font-medium text-primary md:text-2xl">
+          <h2 className="text-xl font-medium text-[#C490FF] md:text-2xl">
             Special Newsletter Signup
           </h2>
           <p className="text-lg text-muted-foreground md:text-xl">
@@ -32,9 +32,9 @@ export function NewsletterSection() {
               placeholder="Enter your email"
               aria-label="Email for newsletter"
               required
-              className="flex-grow"
+              className=" border-2 rounded-3xl w-60"
             />
-            <Button type="submit" className="w-full sm:w-auto">
+            <Button type="submit" className="w-full sm:w-auto rounded-3xl text-white bg-[#4F55C1]">
               Signup
             </Button>
           </form>

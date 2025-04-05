@@ -58,20 +58,20 @@ export function CoreFeaturesSection() {
     >
       <div className="container mx-auto flex flex-col items-center gap-5">
         <AnimatedWrapper className="text-center">
-          <h3 className="text-lg font-medium text-primary md:text-xl">
+          <h3 className="text-xl font-medium text-[#C490FF]  md:text-2xl">
             Features loved by our clients
           </h3>
           <h2 className="mt-2 text-3xl font-semibold md:text-4xl">Core features</h2>
         </AnimatedWrapper>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-[80%] xl:max-w-[70%]">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-[80%] xl:max-w-[70%]">
           {features.map((feature, index) => (
             <AnimatedWrapper
               key={feature.title}
-              className="flex h-full flex-col items-center gap-3 rounded-lg bg-card p-6 text-center shadow-sm border border-border"
+              className="flex h-full flex-col items-center gap-3 p-6 text-center shadow-sm"
               delay={index * 0.1}
             >
-              <feature.icon className="h-12 w-12 text-primary mb-3" />
+              <feature.icon className="h-12 w-12 text-[#C490FF]  mb-3" />
               <h3 className="text-xl font-semibold md:text-2xl">{feature.title}</h3>
               <p className="text-muted-foreground">
                 {feature.description}

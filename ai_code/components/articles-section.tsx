@@ -30,7 +30,7 @@ const articles = [
 
 export function ArticlesSection() {
   return (
-    <section className="flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8 bg-muted/40">
+    <section className="flex w-full flex-col items-center justify-center py-16 md:py-24 px-4 md:px-8">
       <AnimatedWrapper className="text-center mb-10">
         <h3 className="text-3xl font-medium md:text-4xl">
           Read our articles ✨
