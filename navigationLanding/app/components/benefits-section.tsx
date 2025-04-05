@@ -70,15 +70,13 @@ export function BenefitsSection() {
         {/* Right Column: Sticky Image */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-start mt-10 lg:mt-0">
           <div className="lg:sticky lg:top-20 w-full max-w-[320px] lg:max-w-[400px] xl:max-w-[500px] h-auto lg:max-h-[80vh] overflow-hidden rounded-lg">
-             <AnimatedDiv delay={0.5}>
                 <Image
                     src="/assets/images/home/phone3.png"
                     alt="Phone showing app interface"
-                    width={500} // Adjust width based on your image aspect ratio
-                    height={1000} // Adjust height based on your image aspect ratio
+                    width={500} 
+                    height={1000} 
                     className="h-full w-full object-contain"
                 />
-             </AnimatedDiv>
           </div>
         </div>
       </div>

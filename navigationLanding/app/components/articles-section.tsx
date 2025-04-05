@@ -41,7 +41,7 @@ export function ArticlesSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl">
         {articles.map((article, index) => (
           <AnimatedDiv key={index} delay={index * 0.1}>
-            <Card className="overflow-hidden h-full flex flex-col group bg-card hover:shadow-lg transition-shadow duration-300">
+            <Card className="bg-transparent overflow-hidden h-full flex flex-col group  hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="p-0">
                 <div className="aspect-video w-full overflow-hidden">
                   <Image

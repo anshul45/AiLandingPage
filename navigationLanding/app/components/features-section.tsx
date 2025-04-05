@@ -50,7 +50,7 @@ export function FeaturesSection() {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 w-full max-w-6xl px-4">
           {features.map((feature, index) => (
             <AnimatedDiv key={index} delay={index * 0.1}>
-              <Card className="h-full flex flex-col bg-secondary border-border/50 hover:border-primary/50 transition-colors duration-300">
+              <Card className="h-full bg-transparent flex flex-col  border-primary/50  transition-colors duration-300">
                 <CardHeader className="flex flex-row items-start gap-4 space-y-0 pb-4">
                   <div className="text-primary text-3xl md:text-4xl">
                     <feature.icon aria-hidden="true" />

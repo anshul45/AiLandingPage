@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section id="hero-section" className="relative flex min-h-screen w-full max-w-[100vw] flex-col overflow-hidden pt-[60px]">
       <div className="flex h-full min-h-[calc(100vh-60px)] w-full flex-col place-content-center gap-6 p-[5%] xl:items-start items-center lg:p-4">
-        <div className="flex flex-col place-content-center items-center">
+        <div className="w-full flex flex-col place-content-center items-center">
           <AnimatedDiv className="text-center text-4xl font-semibold uppercase leading-snug md:text-6xl md:leading-[80px]">
             <motion.span
               className="gradient-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
@@ -38,9 +38,9 @@ export function HeroSection() {
           <motion.div
             id="dashboard-container"
             className="relative max-w-[800px] max-h-[800px] overflow-hidden rounded-xl bg-transparent max-md:max-w-full"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+            initial={{ rotateX: 50, opacity: 0 }}
+            whileInView={{ rotateX: 0, opacity: 1 }}
+            transition={{ duration: 1.8, delay:1.3 }}
           >
             <Image
               src="/assets/images/home/phone.png"
@@ -60,10 +60,10 @@ export function HeroSection() {
           </AnimatedDiv>
 
           <AnimatedDiv delay={0.7} className="mt-10 flex place-items-center gap-4">
-            <Button size="lg" className="bg-primary/80 shadow-lg shadow-primary/50 transition-transform duration-300 hover:scale-[1.03] hover:bg-primary" asChild>
+            <Button size="lg" className="bg-[#0a8dd3] shadow-lg shadow-[#0a8dd3] transition-transform duration-300 hover:scale-[1.03] hover:bg-primary" asChild>
               <Link href="#get-started">Get started</Link>
             </Button>
-            <Button size="lg" variant="outline" className="flex gap-2 bg-background text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background" asChild>
+            <Button size="lg" variant="ghost" className="flex gap-2 bg-background text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background" asChild>
               <Link href="#learn-more">
                 <PlayCircle className="h-5 w-5" />
                 <span>Learn more</span>
