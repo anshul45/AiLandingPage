@@ -50,12 +50,12 @@ const pricingTiers = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="mt-5 flex w-full flex-col place-items-center p-[2%] py-16 sm:py-24 bg-muted/30 dark:bg-muted/10">
+    <section id="pricing" className="mt-5 flex w-full flex-col place-items-center  py-16 sm:py-24 bg-muted/30 dark:bg-muted/10">
       <AnimatedDiv>
         <h3 className="text-3xl font-medium text-foreground md:text-4xl text-center mb-4">
           Simple, Transparent Pricing
         </h3>
-        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
+        <p className="text-muted-foreground text-center mb-12 w-full mx-auto">
           Choose the plan that fits your needs. No hidden fees, cancel anytime.
         </p>
       </AnimatedDiv>
@@ -63,7 +63,7 @@ export function PricingSection() {
         {pricingTiers.map((tier, index) => (
           <AnimatedDiv key={tier.name} delay={index * 0.1} amount={0.5} className="flex">
             <Card
-              className={`flex w-full max-w-[380px] flex-col border ${tier.popular ? 'border-primary border-2 shadow-lg shadow-primary/30' : 'border-border'} bg-card p-8 lg:max-w-[350px] xl:max-w-[380px]`}
+              className={`flex w-full max-w-[380px] flex-col border ${tier.popular ? 'border-[#7e22ce] border-2 shadow-lg shadow-primary/30' : 'border-border'} bg-card p-8 lg:max-w-[350px] xl:max-w-[380px]`}
             >
               {tier.popular && (
                 <div className="absolute top-0 right-4 -mt-4 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
@@ -94,7 +94,7 @@ export function PricingSection() {
               <CardFooter className="p-0 mt-8">
                 <Button
                   asChild
-                  className={`w-full transition-transform duration-300 hover:scale-[1.02] ${tier.popular ? '' : 'bg-secondary hover:bg-secondary/80 text-secondary-foreground'}`}
+                  className={`w-full transition-transform  duration-300 hover:scale-[1.02] ${tier.popular ? 'bg-[#7e22ce] text-white' : 'bg-[#7e22ce]  hover:bg-secondary/80 text-secondary-foreground'}`}
                   variant={tier.popular ? "default" : "secondary"}
                   size="lg"
                 >

@@ -9,7 +9,7 @@ export function PluginSection() {
   return (
     <section id="solutions" className="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-6 py-16 sm:py-24">
       <AnimatedDiv amount={0.3} className="flex w-full max-w-6xl flex-col place-content-center place-items-center gap-10 lg:flex-row lg:gap-[10%]">
-        <div className="flex justify-center lg:order-2">
+        <div className="flex justify-center lg:order-1">
           <div className="max-h-[500px] max-w-[700px] overflow-hidden rounded-lg shadow-lg shadow-primary/40 dark:shadow-primary/20">
             <Image
               src="/assets/images/home/dash.png"

@@ -25,7 +25,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 z-50 flex h-16 w-full items-center justify-between px-4 sm:px-[5%] lg:justify-around bg-background/80 backdrop-blur-sm"
+      className="absolute top-0 z-50 flex h-16 w-full items-center justify-between px-4  lg:justify-around bg-background/80 backdrop-blur-sm"
     >
       <Link href="/" className="flex-shrink-0 p-1" aria-label="Homepage">
         <Image src="/assets/logo/logo.png" alt="SaaSy Logo" width={42} height={42} className="object-contain" />
@@ -46,7 +46,7 @@ export function Header() {
 
       <div className="hidden lg:flex items-center gap-4 text-base">
         <ThemeToggle />
-        <Button asChild className="group transition-transform duration-300 ease-out hover:translate-x-1">
+        <Button asChild className="group rounded-3xl transition-transform duration-300 ease-out hover:translate-x-1">
           <Link href="/signup" aria-label="Get started">
             <span>Get started</span>
             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
