@@ -69,6 +69,7 @@ export function HeroSection() {
         </div>
 
         {/* Playground Demo */}
+        <AnimatedDiv yOffset={50} delay={0.4} className="relative mt-8 flex w-full justify-center">
         <motion.div
             id="dashboard-container"
             className="flex justify-center"
@@ -79,6 +80,7 @@ export function HeroSection() {
           >
           <PlaygroundDemo />
           </motion.div>
+        </AnimatedDiv>
       </div>
 
       <VideoDialog
