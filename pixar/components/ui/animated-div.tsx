@@ -17,8 +17,8 @@ interface AnimatedDivProps {
 }
 
 const defaultVariants: Variants = {
-  hidden: (custom) => ({ opacity: 0, y: custom?.yOffset ?? 20 }),
-  visible: (custom) => ({
+  hidden: (custom: { yOffset?: number }) => ({ opacity: 0, y: custom?.yOffset ?? 20 }),
+  visible: (custom: { delay?: number; duration?: number }) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -28,7 +28,6 @@ const defaultVariants: Variants = {
     },
   }),
 };
-
 
 export function AnimatedDiv({
   children,
@@ -51,7 +50,7 @@ export function AnimatedDiv({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      custom={[yOffset, delay, duration]} 
+      custom={{ yOffset, delay, duration }}
       className={cn(className)}
     >
       {children}
